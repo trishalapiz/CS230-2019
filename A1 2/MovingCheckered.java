@@ -27,6 +27,7 @@ public class MovingCheckered extends MovingSquare{
 		
 		int distance = width/2;
 		
+		// creating the checkered square pattern
 		for (int i = 0; i < 2; i++) {
 			if (i % 2 == 0) {
 				g2d.setColor(borderColor); // yellow
@@ -46,7 +47,8 @@ public class MovingCheckered extends MovingSquare{
 				g2d.fillRect(topLeft.x + (j * distance), topLeft.y + (j * distance), distance, distance);
 			}
 		}
-			
+		
+		// creating the white circle for the middle of the shape
 		smallCircle.setColor(Color.white);
 		smallCircle.fillOval(topLeft.x + (distance/2), topLeft.y + (distance/2), distance, distance);
 		
@@ -67,7 +69,6 @@ public class MovingCheckered extends MovingSquare{
 	}
 	
 	public boolean contains(Point p) {
-		// must change both width and height to get the shape to change sizes = FIX IMMEDIATELY
 		return super.contains(p);
 	}
 	
